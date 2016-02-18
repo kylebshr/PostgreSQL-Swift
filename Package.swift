@@ -2,7 +2,10 @@ import PackageDescription
 
 #if os(Linux)
 let package = Package(
-  name: "PostgreSQL"
+  name: "PostgreSQL",
+  dependencies: [		
+    .Package(url: "https://github.com/stepanhruda/libpq.git", majorVersion: 9)		
+  ]
 )
 #else
 let package = Package(
